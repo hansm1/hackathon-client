@@ -1,8 +1,18 @@
 function Quad() {
 
-    let x = 200;
-    let y = 200;
-    let d = 40;
+  let player = {
+    x: 200,
+    y: 200,
+    size: 40,
+    draw: function() {
+      fill('red');
+      ellipse(this.x, this.y, this.size, this.size);
+    }
+  };
+
+    // let x = 200;
+    // let y = 200;
+    // let d = 40;
 
     this.setup = function () {
     // canvas
@@ -11,19 +21,20 @@ function Quad() {
   
   this.draw = function () {
     background(220);
+    player.draw();
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
-        x--;
+        player.x--;
       } else if (keyCode == RIGHT_ARROW){
-        x++;
+        player.x++;
       }
       if (keyCode == UP_ARROW){
-        y--;
+        player.y--;
       } else if (keyCode == DOWN_ARROW){
-        y++;
+        player.y++;
     }
   }
-  ellipse(x, y, d, d)
+  // ellipse(x, y, d, d)
   }
 
 
