@@ -2,7 +2,9 @@ var x = 200;
 var y = 200;
 var d = 40;
 function setup () {
-  createCanvas(400,400);
+  // canvas
+  createCanvas(500, 500);
+  fill(150);
 }
 
 function draw () {
