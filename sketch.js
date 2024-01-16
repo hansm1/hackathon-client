@@ -1,12 +1,18 @@
+var pages = [Quad, JYC]
+
+
 function setup () {
-  // canvas
-  createCanvas(500, 500);
-  fill(150);
+  createCanvas(400, 600);
+  var mgr = new SceneManager();
+    // mgr.bkImage = bkImage; // inject bkImage property
+    mgr.wire();
+    mgr.showScene( Quad );
 }
 
-function draw () {
-  // put drawing code here
-}
+
+// function draw () {
+  
+// }
 
 
 
