@@ -1,5 +1,7 @@
 function setup () {
-  // put setup code here
+  // canvas
+  createCanvas(500, 500);
+  fill(150);
 }
 
 function draw () {
