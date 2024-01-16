@@ -1,7 +1,10 @@
 function setup () {
-  // put setup code here
+  function JYC (){
+    rect(50,50,50);
+    
+  }
 }
 
 function draw () {
-  // put drawing code here
+  JYC ();
 }
