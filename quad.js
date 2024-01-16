@@ -42,8 +42,8 @@ function Quad() {
     }
   }
   let d = dist(player.x, player.y, JYCZone.x, JYCZone.y);
-  if(d < 40) {
-    mgr.showScene( JYC );
+  if(d < 15) {
+    this.sceneManager.showScene( JYC );
     player.x = 7;
     JYCZone.y = 485;
   }
