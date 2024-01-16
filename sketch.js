@@ -3,6 +3,7 @@ let pages = [Quad, JYC]
 
 
 function setup () {
+
   createCanvas(400, 600);
   var mgr = new SceneManager();
     // mgr.bkImage = bkImage; // inject bkImage property
