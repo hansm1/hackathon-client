@@ -1,7 +1,23 @@
+var pages = [Quad, JYC]
+
+
 function setup () {
-  // put setup code here
+  createCanvas(400, 600);
+  var mgr = new SceneManager();
+    // mgr.bkImage = bkImage; // inject bkImage property
+    mgr.wire();
+    mgr.showScene( Quad );
 }
 
-function draw () {
-  // put drawing code here
-}
+
+// function draw () {
+  
+// }
+
+
+
+// create an array of all the pages 
+// then create a variable to keep track of what page you're on 
+// identify what areas on the map are 'transporation zones'
+// when the sprite enters a transporation zone, 
+          // alter the 'current' variable to match the corresponding map/page
