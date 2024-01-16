@@ -10,9 +10,15 @@ function Quad() {
     }
   };
 
-    // let x = 200;
-    // let y = 200;
-    // let d = 40;
+  let JYCZone = {
+    x: 400,
+    y: 400,
+    size: 40,
+    draw: function() {
+      fill('red');
+      rect(this.x, this.y, this.size, this.size);
+    }
+  };
 
     this.setup = function () {
     // canvas
@@ -22,6 +28,7 @@ function Quad() {
   this.draw = function () {
     background(220);
     player.draw();
+    JYCZone.draw();
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
         player.x--;
@@ -34,7 +41,13 @@ function Quad() {
         player.y++;
     }
   }
-  // ellipse(x, y, d, d)
+  let d = dist(player.x, player.y, JYCZone.x, JYCZone.y);
+  if(d < 40) {
+    mgr.showScene( JYC );
+    player.x = 7;
+    JYCZone.y = 485;
+  }
+
   }
 
 
