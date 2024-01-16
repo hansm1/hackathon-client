@@ -1,10 +1,15 @@
 var x = 200;
 var y = 200;
 var d = 40;
+var pages = [Quad, JYC]
+
+
 function setup () {
-  // canvas
-  createCanvas(500, 500);
-  fill(150);
+  createCanvas(400, 600);
+  var mgr = new SceneManager();
+    // mgr.bkImage = bkImage; // inject bkImage property
+    mgr.wire();
+    mgr.showScene( Quad );
 }
 
 function draw () {
@@ -23,6 +28,10 @@ function draw () {
   }
   ellipse(x, y, d, d)
 }
+
+// function draw () {
+  
+// }
 
 
 
