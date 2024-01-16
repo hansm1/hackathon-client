@@ -1,3 +1,6 @@
+var x = 200;
+var y = 200;
+var d = 40;
 var pages = [Quad, JYC]
 
 
@@ -7,6 +10,23 @@ function setup () {
     // mgr.bkImage = bkImage; // inject bkImage property
     mgr.wire();
     mgr.showScene( Quad );
+}
+
+function draw () {
+  background(220);
+  if(keyIsPressed){
+    if(keyCode == LEFT_ARROW){
+      x--;
+    } else if (keyCode == RIGHT_ARROW){
+      x++;
+    }
+    if (keyCode == UP_ARROW){
+      y--;
+    } else if (keyCode == DOWN_ARROW){
+      y++;
+    }
+  }
+  ellipse(x, y, d, d)
 }
 
 
