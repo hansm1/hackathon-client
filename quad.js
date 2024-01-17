@@ -90,12 +90,13 @@ function Quad() {
     dormZone.y = 440;
   }
 
-  let libraryDist = dist(player.x, player.y, libraryZone.x, libraryZone.y);
+  let libraryDist = dist(player.x, player.y, LibraryZone.x, LibraryZone.y);
   if(libraryDist < 15) {
     this.sceneManager.showScene( ccLibrary );
     player.x = 7;
     dormZone.y = 100;
   }
+  
   let wilkensDist = dist(player.x, player.y, wilkensZone.x, wilkensZone.y);
   if(wilkensDist < 15) {
     this.sceneManager.showScene( ccLibrary );
