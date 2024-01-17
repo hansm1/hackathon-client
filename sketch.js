@@ -1,50 +1,29 @@
-let img;
+
+let pages = [Quad, JYC, dorm, Library, wilkens];
+let campus_bg;
+let lobby_bg;
+let trashcan;
+let player;
 
 function preload () {
-  img = loadImage("ECQ.png");
+  campus_bg = loadImage('PH.png');
+  lobby_bg = loadImage('ECQ.png');
+  trashcan = loadImage('game_designs/universal/trashcan.jpg');
 }
 
 function setup () {
-  new Canvas()
-
+  createCanvas(400, 600);
+  player = new Sprite(trashcan, 100, 100, 30, 30, true);
+  var mgr = new SceneManager();
+    // mgr.bkImage = bkImage; // inject bkImage property
+    mgr.wire();
+    mgr.showScene( StartScreen );
 }
-function draw (){
 
-  image(img, 0, 0, width, height);
-  fill(31,75,126);
 
-  textSize(40);
-  textFont('Pixelify Sans');
-  text('Emmanuel College', width/2-170, 30);
-  text("Prop Hunt", width/2-100, 60);
-  
-  textSize(25);
-  textFont('Pixelify Sans');
 
-  fill(31,75,126,175);
-  rect(1,1,195,235);
-  rect(width-195, 1,195,235);
-  fill('white');
-  text('Rules:', 60, 25);
-  text('Players Joined:', width-190, 20);
-
-  textSize(15);
-  
-  const rulesText = `  One player is randomly 
-  assigned as a seeker and
-  the rest are props. Once
-  a prop is [REDACTED], it
-  becomes a  seeker. The 
-  props have 30 seconds to 
-  hide before the seekers 
-  are released. The seekers 
-  have 3 minutes to find the 
-  props before the props 
-  win.`;
-  text(rulesText, -3, 45)
-  
-}
- 
- 
-  
-
+// create an array of all the pages 
+// then create a variable to keep track of what page you're on 
+// identify what areas on the map are 'transporation zones'
+// when the sprite enters a transporation zone, 
+// alter the 'current' variable to match the corresponding map/page
