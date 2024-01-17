@@ -1,5 +1,5 @@
 
-let pages = [Quad, JYC]
+// let pages = [Quad, JYC, ccLibrary, wilkens, dorm]
 
 
 function setup () {

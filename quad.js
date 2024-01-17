@@ -20,6 +20,16 @@ function Quad() {
     }
   };
 
+  let dormZone = {
+    x: 540,
+    y: 20,
+    size: 40,
+    draw: function() {
+      fill('red');
+      rect(this.x, this.y, this.size, this.size);
+    }
+  };
+
     this.setup = function () {
     // canvas
     createCanvas(500, 500);
@@ -29,6 +39,8 @@ function Quad() {
     background(220);
     player.draw();
     JYCZone.draw();
+    dormZone.draw();
+    
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
         player.x--;
@@ -41,12 +53,20 @@ function Quad() {
         player.y++;
     }
   }
-  let d = dist(player.x, player.y, JYCZone.x, JYCZone.y);
-  if(d < 15) {
+
+  let jycDist = dist(player.x, player.y, JYCZone.x, JYCZone.y);
+  if(jycDist < 15) {
     this.sceneManager.showScene( JYC );
     player.x = 7;
     JYCZone.y = 485;
   }
+
+  // let dormDist = dist(player.x, player.y, dormZone.x, dormZone.y);
+  // if(dormDist < 15) {
+  //   this.sceneManager.showScene( dorm );
+  //   player.x = 7;
+  //   dormZone.y = 540;
+  // }
 
   }
 
