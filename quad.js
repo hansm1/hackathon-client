@@ -65,14 +65,14 @@ function Quad() {
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
-        player.x--;
+        player.x = player.x - 3;
       } else if (keyCode == RIGHT_ARROW){
-        player.x++;
+        player.x = player.x + 3;
       }
       if (keyCode == UP_ARROW){
-        player.y--;
+        player.y = player.y - 3;
       } else if (keyCode == DOWN_ARROW){
-        player.y++;
+        player.y = player.y + 3;
     }  
   }
 
