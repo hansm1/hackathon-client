@@ -20,6 +20,10 @@ function setup () {
   button.style('font-family', "Pixelify Sans");
   button.style('border-color', darkblue);
 
+  button.mousePressed(() => {
+    
+  });
+
 }
 
 function draw () {
@@ -34,9 +38,5 @@ function draw () {
   textSize(50);
   textFont("Pixelify Sans");
   textAlign(CENTER, CENTER);
-  
-}
-
-function mouseClicked () {
   
 }
