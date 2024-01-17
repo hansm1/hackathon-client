@@ -1,10 +1,15 @@
 
 let pages = [Quad, JYC]
+let trashcan;
+let player;
 
+function preload () {
+  trashcan = loadImage('game_designs/universal/trashcan.jpg');
+}
 
 function setup () {
-
   createCanvas(400, 600);
+  player = new Sprite(trashcan, 100, 100, 30, 30, true);
   var mgr = new SceneManager();
     // mgr.bkImage = bkImage; // inject bkImage property
     mgr.wire();
