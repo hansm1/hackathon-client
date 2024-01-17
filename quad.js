@@ -21,8 +21,28 @@ function Quad() {
   };
 
   let dormZone = {
-    x: 540,
+    x: 440,
     y: 20,
+    size: 40,
+    draw: function() {
+      fill('red');
+      rect(this.x, this.y, this.size, this.size);
+    }
+  };
+
+  let LibraryZone = {
+    x: 100,
+    y: 20,
+    size: 40,
+    draw: function() {
+      fill('red');
+      rect(this.x, this.y, this.size, this.size);
+    }
+  };
+
+  let wilkensZone = {
+    x: 100,
+    y: 420,
     size: 40,
     draw: function() {
       fill('red');
@@ -40,6 +60,8 @@ function Quad() {
     player.draw();
     JYCZone.draw();
     dormZone.draw();
+    LibraryZone.draw();
+    wilkensZone.draw();
     
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
@@ -61,12 +83,26 @@ function Quad() {
     JYCZone.y = 485;
   }
 
-  // let dormDist = dist(player.x, player.y, dormZone.x, dormZone.y);
-  // if(dormDist < 15) {
-  //   this.sceneManager.showScene( dorm );
-  //   player.x = 7;
-  //   dormZone.y = 540;
-  // }
+  let dormDist = dist(player.x, player.y, dormZone.x, dormZone.y);
+  if(dormDist < 15) {
+    this.sceneManager.showScene( dorm );
+    player.x = 7;
+    dormZone.y = 440;
+  }
+
+  let libraryDist = dist(player.x, player.y, libraryZone.x, libraryZone.y);
+  if(libraryDist < 15) {
+    this.sceneManager.showScene( ccLibrary );
+    player.x = 7;
+    dormZone.y = 100;
+  }
+  let wilkensDist = dist(player.x, player.y, wilkensZone.x, wilkensZone.y);
+  if(wilkensDist < 15) {
+    this.sceneManager.showScene( ccLibrary );
+    player.x = 7;
+    dormZone.y = 100;
+  }
+
 
   }
 
