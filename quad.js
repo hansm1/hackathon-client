@@ -10,12 +10,23 @@ function Quad() {
     }
   };
 
+
   let JYCZone = {
     x: 400,
     y: 400,
     size: 40,
     draw: function() {
       fill('blue');
+      rect(this.x, this.y, this.size, this.size);
+    }
+  };
+
+  let miniMap = {
+    x: 50,
+    y: 50,
+    size: 400,
+    draw: function() {
+      fill('orange');
       rect(this.x, this.y, this.size, this.size);
     }
   };
@@ -73,9 +84,23 @@ function Quad() {
         player.y = player.y - 3;
       } else if (keyCode == DOWN_ARROW){
         player.y = player.y + 3;
-    }  
+      }
   }
 
+let mapOn = false;
+
+  if(keyIsPressed){
+    if(keyCode == BACKSPACE){
+      mapOn = true;
+    } else {
+      mapOn = false;
+    }
+  }
+
+  if(mapOn == true){
+    miniMap.draw();
+  }
+  
   let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
   if(jycDist < 30) {
     this.sceneManager.showScene( JYC );
