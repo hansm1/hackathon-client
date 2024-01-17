@@ -1,8 +1,8 @@
 function library() {
     
   let player = {
-    x: 200,
-    y: 200,
+    x: 180,
+    y: 40,
     size: 40,
     draw: function() {
       fill('red');
@@ -33,21 +33,21 @@ function library() {
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
-        player.x--;
+        player.x = player.x - 3;
       } else if (keyCode == RIGHT_ARROW){
-        player.x++;
+        player.x = player.x + 3;
       }
       if (keyCode == UP_ARROW){
-        player.y--;
+        player.y = player.y - 3;
       } else if (keyCode == DOWN_ARROW){
-        player.y++;
-    }
+        player.y = player.y + 3;
+    }  
   }
 
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
   if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
-    player.x = 60;
+    player.x = 180;
     player.y = 40;
     QuadZone.y = 20;
   }

@@ -95,7 +95,7 @@ function Quad() {
   let libraryDist = dist(player.x, player.y, libraryZone.x + libraryZone.size / 2, libraryZone.y + libraryZone.size / 2);
   if(libraryDist < 30) {
     this.sceneManager.showScene( library );
-    player.x = 60;
+    player.x = 180;
     player.y = 40;
     libraryZone.y = 20;
   }
@@ -103,7 +103,7 @@ function Quad() {
   let wilkensDist = dist(player.x, player.y, wilkensZone.x + wilkensZone.size / 2, wilkensZone.y + wilkensZone.size / 2);
   if(wilkensDist < 30) {
     this.sceneManager.showScene( wilkens );
-    player.x = 60;
+    player.x = 180;
     player.y = 440;
     wilkensZone.y = 420;
   }
