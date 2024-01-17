@@ -1,4 +1,4 @@
-function JYC() {
+function dorm() {
     
     this.setup = function () {
     // canvas
@@ -6,6 +6,6 @@ function JYC() {
   }
   
   this.draw = function () {
-    background('pink')
+    background('green')
   }
 }
