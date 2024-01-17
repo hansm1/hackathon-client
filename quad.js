@@ -15,7 +15,7 @@ function Quad() {
     y: 400,
     size: 40,
     draw: function() {
-      fill('red');
+      fill('blue');
       rect(this.x, this.y, this.size, this.size);
     }
   };
@@ -25,7 +25,7 @@ function Quad() {
     y: 20,
     size: 40,
     draw: function() {
-      fill('red');
+      fill('green');
       rect(this.x, this.y, this.size, this.size);
     }
   };
@@ -35,7 +35,7 @@ function Quad() {
     y: 20,
     size: 40,
     draw: function() {
-      fill('red');
+      fill('pink');
       rect(this.x, this.y, this.size, this.size);
     }
   };
@@ -45,7 +45,7 @@ function Quad() {
     y: 420,
     size: 40,
     draw: function() {
-      fill('red');
+      fill('yellow');
       rect(this.x, this.y, this.size, this.size);
     }
   };
