@@ -76,29 +76,29 @@ function Quad() {
     }  
   }
 
-  let jycDist = dist(player.x, player.y, JYCZone.x, JYCZone.y);
-  if(jycDist < 15) {
+  let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
+  if(jycDist < 30) {
     this.sceneManager.showScene( JYC );
     player.x = 7;
-    JYCZone.y = 485;
+    JYCZone.y = 400;
   }
 
-  let dormDist = dist(player.x, player.y, dormZone.x, dormZone.y);
-  if(dormDist < 15) {
+  let dormDist = dist(player.x, player.y, dormZone.x + dormZone.size / 2, dormZone.y + dormZone.size / 2);
+  if(dormDist < 30) {
     this.sceneManager.showScene( dorm );
     player.x = 7;
-    dormZone.y = 440;
+    dormZone.y = 20;
   }
 
-  let libraryDist = dist(player.x, player.y, LibraryZone.x, LibraryZone.y);
-  if(libraryDist < 15) {
-    this.sceneManager.showScene( ccLibrary );
+  let libraryDist = dist(player.x, player.y, LibraryZone.x + LibraryZone.size / 2, LibraryZone.y + LibraryZone.size / 2);
+  if(libraryDist < 30) {
+    this.sceneManager.showScene( library );
     player.x = 7;
     ccLibraryZone.y = 100;
   }
   
-  let wilkensDist = dist(player.x, player.y, wilkensZone.x, wilkensZone.y);
-  if(wilkensDist < 15) {
+  let wilkensDist = dist(player.x, player.y, wilkensZone.x + wilkensZone.size / 2, wilkensZone.y + wilkensZone.size / 2);
+  if(wilkensDist < 30) {
     this.sceneManager.showScene( wilkens );
     player.x = 7;
     wilkensZone.y = 100;

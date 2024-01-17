@@ -44,11 +44,11 @@ function JYC() {
     }
   }
 
-  let QuadDist = dist(player.x, player.y, QuadZone.x, QuadZone.y);
-  if(QuadDist < 15) {
+  let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
+  if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
     player.x = 7;
-    QuadZone.y = 485;
+    QuadZone.y = 400;
   }
 
   }
