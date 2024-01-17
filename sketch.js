@@ -1,5 +1,5 @@
 
-let pages = [Quad, JYC, ccLibrary, wilkens, dorm]
+let pages = [Quad, JYC, ccLibrary, wilkens, dorm, seeker]
 
 
 function setup () {
@@ -7,7 +7,7 @@ function setup () {
   var mgr = new SceneManager();
     // mgr.bkImage = bkImage; // inject bkImage property
     mgr.wire();
-    mgr.showScene( Quad );
+    mgr.showScene( Seeker );
 }
 
 

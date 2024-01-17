@@ -10,6 +10,7 @@ function Quad() {
     }
   };
 
+
   let JYCZone = {
     x: 400,
     y: 400,
