@@ -1,10 +1,12 @@
 
 let pages = [Quad, JYC]
 let trashcan;
+let campus_bg;
 let player;
 
 function preload () {
   trashcan = loadImage('game_designs/universal/trashcan.jpg');
+  campus_bg = loadImage('PH.png');
 }
 
 function setup () {
@@ -13,7 +15,7 @@ function setup () {
   var mgr = new SceneManager();
     // mgr.bkImage = bkImage; // inject bkImage property
     mgr.wire();
-    mgr.showScene( Quad );
+    mgr.showScene( StartScreen );
 }
 
 

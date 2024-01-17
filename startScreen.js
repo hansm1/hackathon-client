@@ -16,14 +16,15 @@ function StartScreen() {
     button.style('border-color', darkblue);
   
     button.mousePressed(() => {
-      
+      button.hide();
+      this.sceneManager.showScene( Quad );
     });
   
   }
 
   this.draw = function () {
 
-    image(img, 0,0, width, height);
+    image(campus_bg, 0,0, width, height);
     fill(255,255,255,191);
     rect((width/2)-210,(height/2)-75,420,175)
   
