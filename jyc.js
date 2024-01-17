@@ -47,7 +47,8 @@ function JYC() {
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
   if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
-    player.x = 7;
+    player.x = 360;
+    player.y = 420;
     QuadZone.y = 400;
   }
 

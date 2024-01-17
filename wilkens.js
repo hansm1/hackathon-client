@@ -11,8 +11,8 @@ function wilkens() {
   };
 
   let QuadZone = {
-  x: 400,
-  y: 400,
+  x: 100,
+  y: 420,
   size: 40,
   draw: function() {
     fill('red');
@@ -46,8 +46,9 @@ function wilkens() {
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
   if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
-    player.x = 7;
-    QuadZone.y = 400;
+    player.x = 60;
+    player.y = 420;
+    QuadZone.y = 420;
   }
 
   }

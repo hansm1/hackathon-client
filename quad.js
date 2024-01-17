@@ -30,7 +30,7 @@ function Quad() {
     }
   };
 
-  let LibraryZone = {
+  let libraryZone = {
     x: 100,
     y: 20,
     size: 40,
@@ -60,7 +60,7 @@ function Quad() {
     player.draw();
     JYCZone.draw();
     dormZone.draw();
-    LibraryZone.draw();
+    libraryZone.draw();
     wilkensZone.draw();
 
     if(keyIsPressed){
@@ -79,29 +79,33 @@ function Quad() {
   let jycDist = dist(player.x, player.y, JYCZone.x + JYCZone.size / 2, JYCZone.y + JYCZone.size / 2);
   if(jycDist < 30) {
     this.sceneManager.showScene( JYC );
-    player.x = 7;
+    player.x = 360;
+    player.y = 420
     JYCZone.y = 400;
   }
 
   let dormDist = dist(player.x, player.y, dormZone.x + dormZone.size / 2, dormZone.y + dormZone.size / 2);
   if(dormDist < 30) {
     this.sceneManager.showScene( dorm );
-    player.x = 7;
+    player.x = 400;
+    player.y = 40;
     dormZone.y = 20;
   }
 
-  let libraryDist = dist(player.x, player.y, LibraryZone.x + LibraryZone.size / 2, LibraryZone.y + LibraryZone.size / 2);
+  let libraryDist = dist(player.x, player.y, libraryZone.x + libraryZone.size / 2, libraryZone.y + libraryZone.size / 2);
   if(libraryDist < 30) {
     this.sceneManager.showScene( library );
-    player.x = 7;
-    ccLibraryZone.y = 100;
+    player.x = 60;
+    player.y = 40;
+    libraryZone.y = 20;
   }
   
   let wilkensDist = dist(player.x, player.y, wilkensZone.x + wilkensZone.size / 2, wilkensZone.y + wilkensZone.size / 2);
   if(wilkensDist < 30) {
     this.sceneManager.showScene( wilkens );
-    player.x = 7;
-    wilkensZone.y = 100;
+    player.x = 60;
+    player.y = 440;
+    wilkensZone.y = 420;
   }
 
   }

@@ -47,7 +47,8 @@ function library() {
   let QuadDist = dist(player.x, player.y, QuadZone.x + QuadZone.size / 2, QuadZone.y + QuadZone.size / 2);
   if(QuadDist < 30) {
     this.sceneManager.showScene( Quad );
-    player.x = 7;
+    player.x = 60;
+    player.y = 40;
     QuadZone.y = 20;
   }
   }
