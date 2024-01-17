@@ -62,7 +62,7 @@ function Quad() {
     dormZone.draw();
     LibraryZone.draw();
     wilkensZone.draw();
-    
+
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
         player.x--;
@@ -73,7 +73,7 @@ function Quad() {
         player.y--;
       } else if (keyCode == DOWN_ARROW){
         player.y++;
-    }
+    }  
   }
 
   let jycDist = dist(player.x, player.y, JYCZone.x, JYCZone.y);
@@ -94,18 +94,18 @@ function Quad() {
   if(libraryDist < 15) {
     this.sceneManager.showScene( ccLibrary );
     player.x = 7;
-    dormZone.y = 100;
+    ccLibraryZone.y = 100;
   }
   
   let wilkensDist = dist(player.x, player.y, wilkensZone.x, wilkensZone.y);
   if(wilkensDist < 15) {
-    this.sceneManager.showScene( ccLibrary );
+    this.sceneManager.showScene( wilkens );
     player.x = 7;
-    dormZone.y = 100;
+    wilkensZone.y = 100;
   }
 
-
   }
+
 
 
 // create an array of all the pages 
