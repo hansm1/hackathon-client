@@ -1,4 +1,4 @@
-function library() {
+function Library() {
     
   let player = {
     x: 180,
