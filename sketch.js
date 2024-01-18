@@ -4,6 +4,8 @@ let campus_bg;
 let lobby_bg;
 let trashcan;
 let player;
+
+let speed = 3;
 let buttonClick;
 let deathNoise;
 let stJuliesMus;
@@ -45,6 +47,8 @@ function setup () {
     mgr.wire();
     mgr.showScene( StartScreen );
 }
+
+
 
 
 
