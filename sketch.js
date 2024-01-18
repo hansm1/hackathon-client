@@ -3,6 +3,7 @@ let pages = [Quad, JYC, dorm, Library, wilkens];
 let campus_bg;
 let lobby_bg;
 let trashcan;
+let campus_bg;
 let player;
 
 let speed = 3;
@@ -24,6 +25,7 @@ function preload () {
   campus_bg = loadImage('PH.png');
   lobby_bg = loadImage('ECQ.png');
   trashcan = loadImage('game_designs/universal/trashcan.jpg');
+  campus_bg = loadImage('PH.png');
   buttonClickSound = loadSound('project_music/ButtonClick.mp3');
   deathNoise = loadSound('project_music/DeathNoise.mp3');
   stJuliesMus = loadSound('project_music/Dorm.mp3');
