@@ -1,9 +1,15 @@
 function Lobby() {
 
+  var lobbyTimer;
+
   this.setup = function () {
     new Canvas()
+    lobbyTimer = new GameTimer();
+    lobbyTimer.start();
+    lobbyTimer.a = 30;
 
   }
+
   this.draw = function () {
 
     image(lobby_bg, 0, 0, width, height);
@@ -37,6 +43,12 @@ function Lobby() {
   find the props before the 
   props win.`;
     text(rulesText, 90, 140)
+
+    lobbyTimer.draw();
+
+    if (lobbyTimer.elapsed()) {
+      this.sceneManager.showScene( Quad );
+    }
 
   }
 }
