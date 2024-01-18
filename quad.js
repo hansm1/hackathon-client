@@ -3,7 +3,7 @@ function Quad() {
   let x = 200;
   let y = 200;
   let d = 40;
-  let mapOn = false;
+
 
   let JYCZone = {
     x: 400,
@@ -62,6 +62,7 @@ function Quad() {
 
   this.draw = function () {
     background(220);
+    let mapOn = false;
     if (keyIsPressed) {
       player.keyIsPressed(keyCode);
 
@@ -72,7 +73,6 @@ function Quad() {
         }
         
       }
-
       JYCZone.draw();
       dormZone.draw();
       libraryZone.draw();
@@ -115,6 +115,7 @@ function Quad() {
       }
 
       player.draw();
+      
     }
 
   }
