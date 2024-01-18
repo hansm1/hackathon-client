@@ -4,6 +4,7 @@ function Quad() {
   let y = 200;
   let d = 40;
 
+
   let JYCZone = {
     x: 400,
     y: 400,
@@ -72,7 +73,6 @@ function Quad() {
         }
         
       }
-
       JYCZone.draw();
       dormZone.draw();
       libraryZone.draw();
@@ -115,6 +115,7 @@ function Quad() {
       }
 
       player.draw();
+      
     }
 
   }
