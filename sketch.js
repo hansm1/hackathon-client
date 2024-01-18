@@ -4,6 +4,7 @@ let campus_bg;
 let lobby_bg;
 let trashcan;
 let player;
+let speed = 3;
 
 function preload () {
   campus_bg = loadImage('PH.png');
@@ -19,6 +20,8 @@ function setup () {
     mgr.wire();
     mgr.showScene( StartScreen );
 }
+
+
 
 
 

@@ -1,15 +1,5 @@
 function Library() {
-    
-  let player = {
-    x: 180,
-    y: 40,
-    size: 40,
-    draw: function() {
-      fill('red');
-      ellipse(this.x, this.y, this.size, this.size);
-    }
-  };
-
+  
   let miniMap = {
     x: 50,
     y: 50,
@@ -43,14 +33,14 @@ function Library() {
 
     if(keyIsPressed){
       if(keyCode == LEFT_ARROW){
-        player.x = player.x - 3;
+        player.x = player.x - speed;
       } else if (keyCode == RIGHT_ARROW){
-        player.x = player.x + 3;
+        player.x = player.x + speed;
       }
       if (keyCode == UP_ARROW){
-        player.y = player.y - 3;
+        player.y = player.y - speed;
       } else if (keyCode == DOWN_ARROW){
-        player.y = player.y + 3;
+        player.y = player.y + speed;
     }  
   }
 

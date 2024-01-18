@@ -20,14 +20,14 @@ class Sprite {
         if(this.controllable != true) return
 
         if(keyCode == LEFT_ARROW){
-            this.x--;
+            this.x = this.x - speed;
           } else if (keyCode == RIGHT_ARROW){
-            this.x++;
+            this.x = this.x + speed;
           }
           if (keyCode == UP_ARROW){
-            this.y--;
+            this.y = this.y - speed;
           } else if (keyCode == DOWN_ARROW){
-            this.y++;
+            this.y = this.y + speed;
         }
     }
 }
