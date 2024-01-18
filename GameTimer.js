@@ -17,13 +17,13 @@ class GameTimer {
         rect(this.boxX, this.boxY, 100, 50);
         fill(0);
         textSize(20);
-        text('Time left', this.boxX, this.boxY)
+        text('Time left', this.boxX + 50, this.boxY + 15)
       
         let minutes = floor(this.a / 60);
         let seconds = this.a - (minutes * 60);
         let remaining = `${minutes}:${nf(seconds, 2)}`
       
-        text(remaining, this.boxX, this.boxY + 20);
+        text(remaining, this.boxX + 50, this.boxY + 35);
     }
 
     elapsed() {
