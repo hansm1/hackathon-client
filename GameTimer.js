@@ -5,6 +5,8 @@ class GameTimer {
 
     start() {
         this.a = 330;
+        this.boxX = 415;
+        this.boxY = 0;
         this.time = setInterval(() => {
             this.a--;
         }, 1000);   
@@ -12,16 +14,16 @@ class GameTimer {
 
     draw() {
         fill(255);
-        rect(415, 0, 100, 50);
+        rect(this.boxX, this.boxY, 100, 50);
         fill(0);
         textSize(20);
-        text('Time left', 420, 20)
+        text('Time left', this.boxX, this.boxY)
       
         let minutes = floor(this.a / 60);
         let seconds = this.a - (minutes * 60);
         let remaining = `${minutes}:${nf(seconds, 2)}`
       
-        text(remaining, 445, 40);
+        text(remaining, this.boxX, this.boxY + 20);
     }
 
     elapsed() {

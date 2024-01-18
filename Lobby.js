@@ -7,6 +7,8 @@ function Lobby() {
     lobbyTimer = new GameTimer();
     lobbyTimer.start();
     lobbyTimer.a = 30;
+    lobbyTimer.boxX = 200;
+    lobbyTimer.boxY = 200;
 
   }
 
