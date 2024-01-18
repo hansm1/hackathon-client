@@ -7,6 +7,7 @@ class GameTimer {
         this.a = 330;
         this.boxX = 415;
         this.boxY = 0;
+        this.text = 'Time Remaining:';
         this.time = setInterval(() => {
             this.a--;
         }, 1000);   
@@ -17,7 +18,7 @@ class GameTimer {
         rect(this.boxX, this.boxY, 100, 50);
         fill(0);
         textSize(20);
-        text('Time left', this.boxX + 50, this.boxY + 15)
+        text(this.text, this.boxX + 50, this.boxY + 15)
       
         let minutes = floor(this.a / 60);
         let seconds = this.a - (minutes * 60);
